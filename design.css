@@ -1,0 +1,43 @@
+.content {
+    display :grid;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-auto-rows: minmax(80px, auto);
+
+    grid-template-areas: 
+    "header header header header header"
+    "nav nav nav nav nav"
+    ". main main main section"
+    ". main main main aside"
+    "footer footer footer footer footer";
+
+    gap: 5px;
+}
+
+header {
+    grid-area: header;
+    background-color: green;
+}
+
+nav {
+ grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+section {
+    grid-area: section;
+}
+aside {
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+}
+.content  > *{
+    background-color: #8b5959;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
